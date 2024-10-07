@@ -43,7 +43,7 @@ nav ul {
     padding-left: 0; /* pl0 */
 }
 nav li {
-    border-bottom: 1px solid #002171;  /* bdb1-sol-#002171 */
+    border-bottom: 1px solid #002171;  /* bdb-sol-#002171 */
 }
 nav a {
     text-decoration: none; /* txd */
@@ -69,7 +69,10 @@ h1 {
     margin-bottom: 0.5em; /* mb0.5em */
     margin-top: 0.5em; /* mt0.5em */
 }    
-h1, h2, h3, footer {
+h1, 
+h2, 
+h3, 
+footer {
     font-family: Georgia, "Times New Roman", serif; /* ^ */
 } 
 h2 { 
@@ -117,6 +120,7 @@ footer{
 table {
     border-bottom: 2px solid #1976d2; /*bdb2-solid-#19756d2*/
     border-collapse: separate; /*bdcl:s*/
+
 }
 th {
     background-color: #1976d2; /* bgc#1976d2 */
@@ -136,7 +140,10 @@ td {
 tr:nth-last-of-type(odd) {
     background-color: #ffcd6f; /* bgc#ffcd6f */
 }
-
+input, 
+textarea {
+    margin-bottom: 0.5em; /* mb.5em */
+}
 @media (max-width: 600px) {
     header {
         background-image: none; /* bgin */
@@ -196,7 +203,7 @@ tr:nth-last-of-type(odd) {
         justify-content: space-around; /* jc */
     }
     nav li {
-        border-bottom: none; /* bdbn */
+        border-bottom: none; /* bdb:n */
     }
     .flow {
         display: flex; /* df */
@@ -206,13 +213,17 @@ tr:nth-last-of-type(odd) {
         flex: 1; /* flex */
         margin-right: 1em; /* mr1em */ 
     }
+    input [type="submit"] {
+        grid-column: 2 / 3;
+        width: 9em;
+    }
 }
-@media (min-width: 1960px) {
+@media (min-width: 1024px) {
     #wrapper {
         margin: auto; /* m:a */
-        width: 80%;
+        width: 80%; /* w80% */
         border: 1px solid #002171; /* bd1-solid-#002171 */
-        box-shadow: 3px 3px 3px #002171; /* bsw */
+        box-shadow: 3px 3px 3px #002171; /* bxsd */
     }
     nav{
         text-align: left; /* ta:l */
@@ -220,19 +231,24 @@ tr:nth-last-of-type(odd) {
     }
     @supports (display: grid) {
         nav ul {
-            flex-direction: column;
-            padding-top: 1em;
+            flex-direction: column; /* flex-direction-column */
+            padding-top: 1em; /* pt1em */
         }
         .hero { 
-            grid-area: hero; }
+            grid-area: hero; 
+        }
         header { 
-            grid-area: header;}
+            grid-area: header;
+        }
         nav { 
-            grid-area: nav;}
+            grid-area: nav;
+        }
         main {
-             grid-area: main;}
+             grid-area: main;
+            }
         footer { 
-            grid-area: footer;}
+            grid-area: footer;
+        }
         #wrapper {
         display: grid;
         grid-template: 
@@ -240,6 +256,7 @@ tr:nth-last-of-type(odd) {
         "nav-hero"
         "nav-main"
         "nav-footer"
-        / 180px 1fr; }
+        / 180px 1fr; 
     }
+   }
   }
