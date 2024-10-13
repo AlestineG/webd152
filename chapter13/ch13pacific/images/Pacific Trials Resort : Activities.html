@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Alex Gehrdau">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pacific Trails Resort activities include 5 miles of hiking trails, ocean view kayaking, and bird watching trips during sunrise.">
+    <title>Pacific Trials Resort :: Activities</title>
+    <link rel="stylesheet" href="aboutus.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  </head>
+  <body>
+    <div id="wrapper">
+    <header>
+      <h1><a href="index.html">Pacific Trails Resort</a></h1>
+    </header> 
+<!-- nav>ul>li*4>a -->
+     <nav>
+     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="yurts.html">Yurts</a></li>
+      <li><a href="activities.html">Activities</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+    </ul>
+   </nav> 
+
+   <main>
+  <h4>About Us</h4>
+  <h5>Hey there! I'm Melanie Bowie, the proud owner of Pacific Trails Resort. I love nature and I am excited to create unforgettable experiences for nature-loving couples and groups of people. At Pacific Trails, we want to give locals a chance to escape the hustle and bustle of city life for a weekend and offer travelers unique experiences. Our resort has awesome daytime activities like kayaking and hiking, and at night, you can enjoy a peaceful and luxurious dining experience or even sleep under the stars. I'm dedicated to providing a one-of-a-kind and memorable getaway for those who appreciate nature and love the outdoors. I can't wait to welcome you to Pacific Trails Resort and help you make some amazing memories!
+  </h5>
+   </main>
+   <div class="container">
+
+    <div class="box">
+      <img src="images/bushtit.jpeg" alt="bushtit">
+    </div>
+
+    <div class="box" >
+      <img src="images/rubycrowned.kinglet.jpeg" alt="rubycrowned">
+    </div>
+
+    <div class="box" >
+      <img src="images/CoupleHiking.jpeg" alt="CoupleHiking">
+    </div> 
+
+    <div class="box" id="box">
+      <img src="images/insideyurt.jpeg" alt="insideyurt">
+    </div>
+
+   
+   <!-- footer>p*2 -->
+   <footer>
+    <p>
+      Copyright &copy; 2024 Pacific Trails Resort
+        Alex Gehrdau
+   </p>
+</footer>
+</div> <!-- This closes my wrapper div-->
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
